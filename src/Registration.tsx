@@ -2,9 +2,6 @@ import React, {useState} from 'react';
 import {Button, Form, Grid, Header, Segment} from 'semantic-ui-react'
 
 
-
-
-
 const Registration = () => {
 
 
@@ -12,17 +9,17 @@ const Registration = () => {
   // const name = useSelector(state => state)
   // console.log(name)
 
-  const [user, setUser] = useState([{id:1, firstName:"", lastName:"", email:"",password:"" }])
+  const [user, setUser] = useState([{id: 1, firstName: "", lastName: "", email: "", password: ""}])
 
-  const addUser = ()=>{
+  const addUser = () => {
     setUser([...user, {
       id: Date.now(),
-      firstName:firstName,
-      lastName:lastName,
-      email:email,
-      password:password,
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      password: password,
     }])
-}
+  }
 
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -53,7 +50,7 @@ const Registration = () => {
           <Segment stacked>
             <h3>First name</h3>
             <Form.Input
-              onChange={(e:any)=>firstNameHandler(e)}
+              onChange={(e: any) => firstNameHandler(e)}
               value={firstName}
               type="text"
               fluid icon='user'
@@ -61,7 +58,7 @@ const Registration = () => {
               placeholder='First name'/>
             <h3>Last name</h3>
             <Form.Input
-              onChange={(e:any)=>lastNameHandler(e)}
+              onChange={(e: any) => lastNameHandler(e)}
               value={lastName}
               fluid
               icon='user'
@@ -71,7 +68,7 @@ const Registration = () => {
             />
             <h3>Email</h3>
             <Form.Input
-              onChange={(e:any)=>emailHendler(e)}
+              onChange={(e: any) => emailHendler(e)}
               value={email}
               name="mail"
               type="text"
@@ -80,7 +77,7 @@ const Registration = () => {
               placeholder='E-mail address'/>
             <h3>Password</h3>
             <Form.Input
-              onChange={(e:any)=>passwordHendler(e)}
+              onChange={(e: any) => passwordHendler(e)}
               value={password}
               fluid
               icon='lock'
@@ -88,7 +85,9 @@ const Registration = () => {
               placeholder='Password'
               type='password'
             />
-            <Button onClick={()=>{addUser()}} color='teal' fluid size='large'>
+            <Button onClick={() => {
+              addUser()
+            }} color='teal' fluid size='large'>
               Sig in
             </Button>
           </Segment>
