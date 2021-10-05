@@ -47,7 +47,7 @@ const App = () => {
                 <Link to="/registration">
                   <Menu.Item as='a'>
                     <Icon name='registered outline'/>
-                    Sign In
+                    Sign In Now
                   </Menu.Item>
                 </Link>
               </Sidebar>
